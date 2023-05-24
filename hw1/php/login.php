@@ -45,6 +45,14 @@
                 echo '</script>'; 
             }
         }
+        else
+        {
+            //L'utente non esiste
+            echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>';
+            echo '<script>';
+            echo 'Swal.fire("Errore", "Utente non trovato", "error");';
+            echo '</script>';
+        }
     }
 ?>
 
