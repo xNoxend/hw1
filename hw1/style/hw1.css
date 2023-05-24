@@ -1,0 +1,847 @@
+
+html
+{
+  font-family: 'Calibri Light' , 'New Century Schoolbook';
+  font-size: 15px;
+}
+
+
+body
+{
+  background-color: rgb(255, 255, 255);
+  margin: 0px;
+  font-weight: normal;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+header 
+{
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70vh;
+}
+
+.header-left 
+{
+  flex-shrink: 0;
+}
+
+.header-image
+{
+  height: 400px;
+}
+
+.header-right 
+{
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.header-link 
+{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #12175b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.header-link:hover 
+{
+  background-color: #0b0e39;
+  color: white;
+}
+
+/* Stile della barra di ricerca */
+.search-container 
+{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+
+.search-container input:focus 
+{
+  outline: none;
+}
+  
+
+.search-container form , .search-bar
+{
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.search-container input[type=text] 
+{
+  flex: 1;
+  padding: 15px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.search-container button[type=submit] , .search-bar button
+{
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.search-container button[type=submit]:hover , .search-bar button:hover
+{
+  background-color: #ccc;
+}
+
+/* Stile dell'icona di ricerca */
+.search-container img 
+{
+  height: 20px;
+  width: 20px;
+}
+
+/* Barra dove mettere logo e icone */
+.barra-nera 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  background-color: black;
+  z-index: 3;
+}
+
+/* Logo RoyalTech */
+.logo 
+{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -46px;
+  z-index: 4;
+
+}
+  
+.logo img 
+{
+  width: 160px;
+  height: 60px;
+  margin-top: 45px;
+  margin-left: 40px;
+}
+
+/* Icone menù, lista preferiti e "like" al prodotto */
+.user-icons 
+{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 4;
+}
+
+.user-icons a 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.user-icons img , .prodotto .favorites-icon img
+{
+  height: 30px;
+  width: 30px;
+}
+
+.user-icons .separator 
+{
+  height: 25px;
+  width: 1px;
+  background-color: #ddd;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.user-icons .favorites-icon .hover
+{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.prodotto .favorites-icon .preferito
+{
+  display: none;
+  margin-top: -30px;
+}
+
+
+.prodotto .favorites-icon 
+{
+  cursor: pointer;
+}
+
+
+.testoProdEv 
+{
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 1px 1px 4px rgb(149, 149, 149);
+}
+
+.testoCerca
+{
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 1px 1px 4px rgb(149, 149, 149);
+  margin-top: 40px;
+  margin-bottom: -80px;
+}
+
+.prodotto
+{
+  margin: 20px;
+  border: 2px solid grey;
+  justify-content: space-around;
+  padding: 5px;
+  width: 250px;
+  height: 350px;
+  position: relative;
+  background-color: rgb(0, 0, 0);
+}
+
+.prodotto .favorites-icon img
+{
+  margin-left: 220;
+}
+
+
+.prodotto h1
+{
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 5px rgb(100, 100, 100);
+  text-align: center;
+}
+
+.prodotto .link_esterno
+{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  position: absolute;
+  bottom: 5px;
+  right: 4px;
+  font-size: 18px;
+  background-color: #12175b;
+  padding: 5px;
+  border-radius: 30px;
+}
+
+.prodotto p
+{
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  font-size: 20px;
+  position: absolute;
+  bottom: -10px;
+  left: 5px;
+}
+
+.prodotto .riquadro 
+{
+  bottom: 5px;
+  opacity: 0.9;
+  border-bottom: 1px solid grey;
+  position: absolute;
+  margin-bottom: 38px;
+  width: 97%;
+  right: 4px;
+}
+
+.prodotto .link_esterno:hover
+{
+  background-color: #0b0e39;
+}
+
+.prodotto.cen
+{
+  width: 280px;
+  height: 380px;
+  box-shadow: 0px 0px 18px 13px #a09d9dde;
+}
+
+.prodotto.cen .productImg
+{
+  width: 280px;
+  height: 220px;
+}
+
+.prodotto.cen .favorites-icon img
+{
+  margin-left: 250;
+}
+
+.prodotto.sx, .prodotto.dx
+{
+  margin-top: 33px;
+}
+
+.linea
+{
+  width: 100%;
+  height: 3px;
+  background-color: grey;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+#product, #preferiti
+{
+  padding: 10px;
+  margin-left: 100px;
+}
+
+.productImg
+{
+  display: block;
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border : 1px solid grey;
+}
+
+.favorites-icon:hover .hover, .favorites-icon:hover .preferito
+{
+  display: block;
+  cursor: pointer;
+}
+
+.hidden 
+{
+  display: none;
+}
+
+
+.separator 
+{
+  width: 1px;
+  height: 30px;
+  background-color: gray;
+  margin: 0 10px;
+}
+
+.account-menu 
+{
+  position: absolute;
+  width: 80px;
+  top: 40px;
+  left: 0;
+  display: none;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 11px;
+  flex-direction: column;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.nomeUser
+{
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  font-size: 20px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.account-menu a
+{
+  border:0;
+  border-bottom:1px solid lightgray;
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#fff;
+  margin-right: -12px;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+
+.reindirizzamento
+{
+  border:0;
+  border-bottom:1px solid rgb(195, 195, 195);
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#000000;
+  text-transform:uppercase;
+  text-decoration:none;
+  text-align: center;
+}
+
+.account-menu a:focus
+{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #e74c3c;	
+}
+
+.account-menu a:hover
+{
+  color:#e74c3c;
+}
+
+
+
+/*CSS REGISTRAZIONE E LOGIN*/
+
+.text-center
+{
+	color:#000000;	
+	text-transform:uppercase;
+  	font-size: 23px;
+  	margin: -50px 0 80px 0;
+  	display: block;
+  	text-align: center;
+}
+
+.box
+{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+  background-color: lightgray;
+	border-radius:10px;
+	padding:70px 100px;
+}
+
+.input-container
+{
+	position:relative;
+	margin-bottom:30px;
+}
+
+.input-container label
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:#000000;	
+	transition: all 0.5s ease-in-out;
+}
+
+.input-container input, .registerlink
+{ 
+  border:0;
+  border-bottom:1px solid #000000;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#000000;
+  text-decoration: none;
+}
+
+.input-container input:focus, .registerlink:focus 
+{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #e74c3c;	
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label
+{
+	top:-12px;
+	font-size:12px;
+}
+
+
+/*ICONE LOGIN E REGISTER*/
+
+.form_icon_profile
+{
+  position: absolute;
+  top: 129px;
+  left: 50px;
+}
+
+.form_icon_mail
+{
+  position: absolute;
+  width: 7%;
+  top: 194px;
+  left: 53px;
+}
+
+.form_icon_pw, .hover_form
+{
+  position: absolute;
+  top: 256px;
+  width: 7%;
+  left: 53px;
+  transition: all 0.5s ease-in-out;
+}
+
+.pw_form .hover_form 
+{
+  display: none;
+}
+
+.pw_form:hover .form_icon_pw
+{
+  display: none;
+}
+
+.pw_form:hover .hover_form 
+{
+  display: block;
+}
+
+
+/*EYE LOGIN*/
+
+.pw_login img
+{
+  position: absolute;
+  top: 72px;
+  width: 14%;
+  left: -46px;
+  transition: all 0.5s ease-in-out;
+}
+
+
+/*CSS SEZIONE NEWS + PRODOTTI DELLA HOME*/
+
+#news , #product, #prodInEvidenza, #preferiti
+{
+  top: 30;
+  left: auto;
+  right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.articolo
+{
+  margin: 20px;
+  border: 3px solid rgb(0, 0, 0);
+  justify-content: space-around;
+  padding: 5px;
+  width: 250px;
+  height: 300px;
+  background-color: rgb(0, 0, 0);
+}
+
+
+.articolo h1
+{
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 5px rgb(100, 100, 100);
+  text-align: center;
+}
+
+.articolo a
+{
+  bottom: 10px;
+  left: 10px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+
+.articolo a:hover
+{
+  color: red;
+  text-decoration: none;
+  background-color: none;
+}
+
+.articolo img
+{
+  display: block;
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.articolo a:visited
+{
+  text-align: center;
+  color: rgb(110, 11, 11);
+}
+
+.articolo a:active 
+{
+  text-align: center;
+  color: rgb(110, 11, 11);
+}
+
+.search-bar
+{
+  margin-top: 100px;
+}
+
+/* Stile per il footer */
+
+footer 
+{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 50px;
+  z-index: 9999;
+}
+
+/* SEZIONE PREFERITI */
+
+
+#cercapreferiti 
+{
+  width: 30%;
+}
+
+#preferiti .prodotto
+{
+  margin: 15px;
+}
+
+.filtri
+{
+    margin-top: 36px;
+    margin-left: 32px;
+    height: 10;
+    width: 10%;
+}
+
+.filtri label 
+{
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+input[type="radio"]:checked
+{
+  background-color: #2196F3;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.intFiltri
+{
+  margin-left: 35px;
+  text-shadow: 1px 1px 2px rgb(149, 149, 149);
+  font-size: 28px;
+  margin-top: 92px;
+}
+
+#azzera-filtri
+{
+  font-size: 15px;
+  margin-top: 15px;
+  margin-left: 15px;
+  border-radius: 5px;
+}
+
+#azzera-filtri:hover
+{
+  background-color: rgb(166, 166, 166);
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: none;
+}
+
+.lineaVerticale
+{
+  width: 100%;
+  height: 3px;
+  background-color: grey;
+  margin-top: 50px;
+  transform: rotate(90deg);
+  position: absolute;
+  margin-left: -585px;
+}
+
+
+.intPreferiti
+{
+  text-align: center;
+  font-size: 50px;
+  margin-top: -92px;
+}
+
+
+/* SEZIONE CSS PER MOBILE*/
+
+@media only screen and (max-width: 1100px) 
+{
+  .header-left 
+  {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-left img
+  {
+    width: 100%;
+    height: 100%;
+  }
+
+  .header-right
+  {
+    width: 60%;
+    height: 60%;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+  }
+
+  .prodotto, .articolo
+  {
+    width: 145px;
+    height: 260px;
+  }
+
+  .prodotto.cen 
+  {
+      width: 170px;
+      height: 285px;
+  }
+
+  .prodotto .productImg, .prodotto.cen .productImg
+  {
+    width: 100%;
+    height: 120px;
+  }
+
+  .prodotto h1, .prodotto.cen h1
+  {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    margin-bottom: 48px;  
+  }
+
+  .pw_login img
+  {
+    top: 66px;
+    width: 20%;
+  }
+
+  .input-container input
+  {
+    width: 130px;
+  }
+
+  .prodotto .favorites-icon img 
+  {
+    margin-left: 120px;
+    height: 20px;
+    width: 20px;
+  }
+
+  .prodotto .favorites-icon .preferito 
+  {
+    display: none;
+    margin-top: -21px;
+  }
+
+  .prodotto p
+  {
+    font-size: 14px;
+  }
+
+  .prodotto .link_esterno
+  {
+    font-size: 12px;
+    padding: 1px;
+  }
+
+  .prodotto.cen .favorites-icon img 
+  {
+    margin-left: 150px;
+  } 
+
+  .articolo h1
+  {
+    font-size: 11px;
+  }
+
+  .search-bar
+  {
+    width: 60%;
+  }
+
+  .testoProdEv
+  {
+    font-size: 30px;
+  }
+
+  .filtri 
+  {
+    margin-top: 20px;
+    margin-right: 61px;
+    height: 15px;
+    width: 18%;
+    margin-left: 0;
+  }
+
+  .intFiltri 
+  {
+    margin-left: 4px;
+    font-size: 24px;
+    margin-top: 90px;
+  }
+
+  .intPreferiti 
+  {
+    text-align: center;
+    font-size: 35px;
+    margin-left: 100;
+    margin-top: -90px;
+  }
+
+  #preferiti
+  {
+    margin-left: 86px;
+  }
+}
